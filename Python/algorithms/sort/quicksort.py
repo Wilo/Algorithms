@@ -1,7 +1,7 @@
-from helpers import Collection
+from helpers import Array
 
 # function to find the partition position
-def __partition(array: Collection, low: int, high: int) -> int:
+def __partition(array: Array, low: int, high: int) -> int:
 
     # choose the rightmost element as pivot
     pivot: int = array[high]
@@ -28,7 +28,28 @@ def __partition(array: Collection, low: int, high: int) -> int:
 
 
 # function to perform quicksort
-def quicksort(array: Collection, low: int, high: int) -> None:
+def quicksort(array: Array, low: int, high: int) -> None:
+    """Array sorting using quicksort algorithm
+
+    Time Complexity:
+        Best: O(n log(n))
+        Average: O(n log(n))
+        Wrost: O(n²)
+
+    Space Complexity:
+        Wrost: O(log(n))
+
+    Args:
+        array (Array): Unsorted Array
+        low (int): Array's left position
+        high (int): Array's right position
+
+    Example:
+    >>> array = [9, 8, 6, 7, 2, 3, 5, 1, 4]
+    >>> quicksort(array)
+    >>> print(array)
+    [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    """
     if low < high:
 
         # find pivot element such that
