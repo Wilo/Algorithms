@@ -17,6 +17,7 @@ class TestCases:
 
 class TestQuickSort:
     ARRAY_UNSORTED: List[int] = [9, 8, 6, 7, 2, 3, 5, 1, 4]
+    SORTED_ARRAY: List[int] = [1, 2, 3, 4, 5, 6, 7, 8, 9]
     EXPECTED_ARRAY: List[int] = [1, 2, 3, 4, 5, 6, 7, 8, 9]
     EMPTY_ARRAY: List = []
     EXPECTED_EMPTY_ARRAY: List = []
@@ -30,6 +31,13 @@ class TestQuickSort:
             0,
             len(EMPTY_ARRAY) - 1,
             EXPECTED_EMPTY_ARRAY,
+        ),
+        TestCases(
+            "Sorted Array Test Case",
+            SORTED_ARRAY,
+            0,
+            len(SORTED_ARRAY) - 1,
+            EXPECTED_ARRAY,
         ),
     ]
 
