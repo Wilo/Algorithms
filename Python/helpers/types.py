@@ -4,6 +4,7 @@ from typing import (
 )
 
 # custom type
-Collection = List[Union[int, List[int]]]
+Collection = List[Union[int, List[int], List[List[List[int]]]]]
 Array = List[int]
 Matrix = List[List[int]]
+Matrix3D = List[List[List[int]]]
