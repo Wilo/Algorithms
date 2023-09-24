@@ -21,6 +21,25 @@ class TestBinarySearch:
         [1, 2, 4],
         [4, 5, 6],
         [7, 8, 9],
+        [10, 11, 12],
+    ]
+    MATRIX_3D_BASE: Collection = [
+        [
+            [1, 2, 3],
+            [4, 5, 6],
+        ],
+        [
+            [7, 8, 9],
+            [10, 11, 12],
+        ],
+        [
+            [13, 14, 15],
+            [16, 17, 18],
+        ],
+        [
+            [19, 20, 21],
+            [22, 23, 24],
+        ],
     ]
     test_cases: List[TestCases] = [
         TestCases("Array:> Happy Path", ARRAY_BASE, 1000, True),
@@ -29,6 +48,9 @@ class TestBinarySearch:
         TestCases("Matrix:> Happy Path", MATRIX_BASE, 5, True),
         TestCases("Matrix:> Sad Path", MATRIX_BASE, 50, False),
         TestCases("Matrix:> Empty Collection", [], 10, False),
+        TestCases("Matrix3D:> Happy Path", MATRIX_3D_BASE, 5, True),
+        TestCases("Matrix3D:> Sad Path", MATRIX_3D_BASE, 50, False),
+        TestCases("Matrix3D:> Empty Collection", [[[]]], 10, False),
     ]
 
     @pytest.mark.parametrize(

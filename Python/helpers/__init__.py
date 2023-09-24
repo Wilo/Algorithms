@@ -3,6 +3,7 @@ from .types import (
     List,
     Array,
     Matrix,
+    Matrix3D,
 )
 
 __all__ = (
@@ -10,4 +11,5 @@ __all__ = (
     "List",
     "Array",
     "Matrix",
+    "Matrix3D",
 )
